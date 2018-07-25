@@ -1,0 +1,172 @@
+body,
+td,
+th,
+p {
+    font-family: $font_0, $font_1, $font_2;
+    font-size: 10pt;
+    color: $color_mine_shaft_approx;
+    line-height: 1.5;
+}
+
+body {
+    background-color: $color_romance_approx;
+    margin: 0;
+    position: relative;
+}
+
+ul {
+    font-family: $font_0, $font_1, $font_2;
+    font-size: 10pt;
+    color: $color_mine_shaft_approx;
+}
+
+li {
+    font-family: $font_0, $font_1, $font_2;
+    font-size: 10pt;
+    color: $color_mine_shaft_approx;
+}
+
+a {
+    color: $web_orange;
+    text-decoration: none;
+    &:hover {
+        color: $color_curious_blue_approx;
+        text-decoration: none;
+    }
+    &:focus {
+        color: $color_curious_blue_approx;
+        text-decoration: none;
+    }
+    img {
+        border: none 0 $white;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font_0, $font_1, $font_2;
+  margin: 0 0 20px;
+}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: $color_shark_approx;
+    text-align: center;
+    h1 {
+        margin: auto;
+        a {
+            color: $white;
+            font-size: 14pt;
+            font-weight: 200;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+#maincontent {
+    background-color: $color_concrete_approx;
+    min-height: 100%;
+}
+
+#footer {
+    background-color: $color_tundora_approx;
+    color: $color_silver_chalice_approx;
+    font-size: 8pt;
+    letter-spacing: 1px;
+    padding: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#breadcrumb {
+    padding: 10px 40px 16px;
+    list-style: none;
+    background-color: $color_gallery_approx;
+    font-size: 17px;
+    margin: 0;
+    width: calc(50% - 80px);
+    li {
+        display: inline;
+        a {
+            color: $color_science_blue_approx;
+            text-decoration: none;
+            &:hover {
+                color: $color_congress_blue_approx;
+                text-decoration: underline;
+            }
+        }
+        +li:before {
+            padding: 8px;
+            color: $black;
+            content: "/\00a0";
+        }
+    }
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    background-color: $color_celeste_approx;
+}
+
+.filter-options {
+    width: 100%;
+    height: 50px;
+    background-color: $color_curious_blue_approx;
+    align-items: center;
+    h2 {
+        color: $white;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1;
+        margin: 0 20px;
+    }
+    select {
+        background-color: $white;
+        border: 1px solid $white;
+        font-family: $font_0, $font_2;
+        font-size: 11pt;
+        height: 35px;
+        letter-spacing: 0;
+        margin: 10px;
+        padding: 0 10px;
+        width: 200px;
+    }
+}
+
+.inside {
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    #map-container {
+        background: $blue none repeat scroll 0 0;
+        height: 87%;
+        position: fixed;
+        right: 0;
+        top: 80px;
+        width: 50%;
+    }
+    #map {
+        background-color: $color_celeste_approx;
+        height: 100%;
+        width: 100%;
+    }
+    #footer {
+        bottom: 0;
+        position: absolute;
+        width: 50%;
+    }
+}
+
+
+
+
+

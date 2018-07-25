@@ -1,0 +1,33 @@
+#reviews-container {
+    border-bottom: 1px solid $color_alto_approx;
+    border-top: 1px solid $white;
+    padding: 140px 40px 30px;
+    width: 50%;
+    padding: 30px 40px 80px;
+    h2 {
+        color: $color_tangerine_approx;
+        font-size: 24pt;
+        font-weight: 300;
+        letter-spacing: -1px;
+        padding-bottom: 1pt;
+    }
+}
+
+#reviews-list {
+    margin: 0;
+    padding: 0;
+    li {
+        background-color: $white;
+        border: 2px solid $color_concrete_approx;
+        display: block;
+        list-style-type: none;
+        margin: 0 0 30px;
+        overflow: hidden;
+        padding: 0 20px 20px;
+        position: relative;
+        width: 85%;
+        p {
+            margin: 0 0 10px;
+        }
+    }
+}
