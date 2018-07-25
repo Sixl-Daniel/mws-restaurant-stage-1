@@ -1,0 +1,13 @@
+/* 
+ * normalize styles across all browsers: 
+ * https://github.com/JohnAlbin/normalize-scss 
+ */
+// @import 'normalize/variables';
+// @import 'normalize/vertical-rhythm';
+// @import 'normalize/normalize-mixin';
+@import 'normalize';
+
+@import 'definitions';
+@import 'general';
+@import 'restaurant';
+@import 'reviews';
