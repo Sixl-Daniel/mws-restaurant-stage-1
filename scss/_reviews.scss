@@ -1,33 +1,45 @@
 #reviews-container {
-    border-bottom: 1px solid $color_alto_approx;
-    border-top: 1px solid $white;
-    padding: 140px 40px 30px;
-    width: 50%;
-    padding: 30px 40px 80px;
+    margin: 0 0 2rem;
+    text-align: center;
     h2 {
-        color: $color_tangerine_approx;
-        font-size: 24pt;
-        font-weight: 300;
-        letter-spacing: -1px;
-        padding-bottom: 1pt;
+        color: $color_accent;
+        // font-size: 1.5em;
+        margin: 0;
     }
 }
 
 #reviews-list {
+    @extend %flexHorizontal;
+    justify-content: center;
+    align-items: stretch;
     margin: 0;
     padding: 0;
+    text-align: left;
+    list-style-type: none;
     li {
-        background-color: $white;
-        border: 2px solid $color_concrete_approx;
-        display: block;
-        list-style-type: none;
-        margin: 0 0 30px;
-        overflow: hidden;
-        padding: 0 20px 20px;
-        position: relative;
-        width: 85%;
-        p {
-            margin: 0 0 10px;
-        }
+        @extend %boxShadow;
+        background-color: $color_white;
+        display: block;       
+        margin: 1rem;
+        padding: 0;
+        max-width: 24rem;
     }
+}
+
+.review-meta {
+    @extend %flexHorizontal;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $color_accent;
+    padding: 1rem 1rem;
+    line-height: 1;
+    background-color: $color_concrete_approx;
+}
+
+.review-name {
+    font-weight: 700;
+}
+
+.review-comments {
+    padding: 0 1rem 1rem;
 }

@@ -33,23 +33,7 @@ initMap = () => {
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
   });
-}  
- 
-/* window.initMap = () => {
-  fetchRestaurantFromURL((error, restaurant) => {
-    if (error) { // Got an error!
-      console.error(error);
-    } else {
-      self.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
-        center: restaurant.latlng,
-        scrollwheel: false
-      });
-      fillBreadcrumb();
-      DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
-    }
-  });
-} */
+}
 
 /**
  * Get current restaurant from page URL.
@@ -83,14 +67,14 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
 
-  const address = document.getElementById('restaurant-address');
+  const address = document.getElementById('restaurant-address').getElementsByTagName('span')[0];
   address.innerHTML = restaurant.address;
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
-  const cuisine = document.getElementById('restaurant-cuisine');
+  const cuisine = document.getElementById('restaurant-cuisine').getElementsByTagName('span')[0];
   cuisine.innerHTML = restaurant.cuisine_type;
 
   // fill operating hours
@@ -148,19 +132,28 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
-  const name = document.createElement('p');
+  const meta = document.createElement('p');
+  meta.className = "review-meta";
+  
+  const name = document.createElement('span');
+  name.className = "review-name";
   name.innerHTML = review.name;
-  li.appendChild(name);
+  meta.appendChild(name);
 
-  const date = document.createElement('p');
+  const date = document.createElement('span');
+  date.className = "review-date";
   date.innerHTML = review.date;
-  li.appendChild(date);
+  meta.appendChild(date);
 
-  const rating = document.createElement('p');
+  const rating = document.createElement('span');
+  rating.className = "review-rating";
   rating.innerHTML = `Rating: ${review.rating}`;
-  li.appendChild(rating);
+  meta.appendChild(rating);
+
+  li.appendChild(meta);
 
   const comments = document.createElement('p');
+  comments.className = "review-comments";
   comments.innerHTML = review.comments;
   li.appendChild(comments);
 

@@ -1,8 +1,9 @@
 let restaurants,
   neighborhoods,
-  cuisines
-var newMap
-var markers = []
+  cuisines;
+
+var newMap;
+var markers = [];
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
@@ -74,7 +75,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
 initMap = () => {
   self.newMap = L.map('map', {
         center: [40.722216, -73.987501],
-        zoom: 12,
+        zoom: 11,
         scrollWheelZoom: false
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
@@ -88,18 +89,6 @@ initMap = () => {
 
   updateRestaurants();
 }
-/* window.initMap = () => {
-  let loc = {
-    lat: 40.722216,
-    lng: -73.987501
-  };
-  self.map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
-    center: loc,
-    scrollwheel: false
-  });
-  updateRestaurants();
-} */
 
 /**
  * Update page and map for current restaurants.
@@ -156,14 +145,21 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
+
+  // console.log(restaurant);
+
   const li = document.createElement('li');
 
+  const figure = document.createElement('figure');
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+  image.alt = 'Mood image of ' + restaurant.name || '';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  li.append(image);
+  figure.append(image)
+  li.append(figure);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
+  name.className = 'restaurant-heading';
   name.innerHTML = restaurant.name;
   li.append(name);
 

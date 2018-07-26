@@ -1,0 +1,29 @@
+@mixin flexHorizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap,
+}
+
+%flexHorizontal {
+    @include flexHorizontal;
+}
+
+
+@mixin flexVertical {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap,
+}
+
+%flexVertical {
+    @include flexVertical;
+}
+
+
+@mixin boxShadow {
+    box-shadow: rgba(0, 0, 0, 0.19) 2px 8px 20px 2px;
+}
+
+%boxShadow {
+    @include boxShadow;
+}
