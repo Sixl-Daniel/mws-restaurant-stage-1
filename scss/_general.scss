@@ -6,7 +6,8 @@ html {
 }
 
 body {
-    background-color: $color_white;
+    background-color: $color_light;
+    color: $color_dark;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='565' height='67.8' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23ededed' stroke-width='14.6' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
     position: relative;
     font-family: 'Roboto', Arial, 'Helvetica Neue', Helvetica, sans-serif;
@@ -17,15 +18,15 @@ a {
     color: $color_accent;
     text-decoration: none;
     &:hover {
-        color: $color_curious_blue_approx;
+        color: $color_primary;
         text-decoration: none;
     }
     &:focus {
-        color: $color_curious_blue_approx;
-        text-decoration: none;
+        @extend %focusBasic;
+        color: $color_primary;
     }
     img {
-        border: none 0 $color_white;
+        border: none;
     }
 }
 
@@ -42,21 +43,27 @@ img {
     margin: 0 auto;
 }
 
-nav {
+input,
+textarea,
+select {
+    &:focus {
+        outline: 2px solid $color_accent;
+    }
+}
+
+.page-heading {
     @extend %flexHorizontal;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 1rem 2rem;
-    background-color: $color_tundora_approx;
-    .page-heading {
-        margin: 0;
-        line-height: 1;
-        text-transform: uppercase;
-        font-size: 2rem;
-        a {
-            color: $color_white;
-        }
+    background-color: $color_secondary;
+    margin: 0;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 2rem;
+    a {
+        color: $color_light;
     }
 }
 
@@ -71,14 +78,15 @@ nav {
     align-items: center;
     text-align: center;
     padding: 0.5rem 2rem;
-    background-color: $color_tundora_approx;
-    color: $color_silver_chalice_approx;
+    background-color: $color_secondary;
+    color: $color_light;
     a { 
         text-transform: uppercase;
         padding: 1rem; 
         transition: color 200ms ease-out;
+        color: $color_light;
         &:hover {
-            color: $color_curious_blue_approx;
+            color: $color_primary;
         }
     }
 }
@@ -86,7 +94,7 @@ nav {
 #breadcrumb {
     padding: 1rem 2rem;
     list-style: none;
-    background-color: $color_white;
+    background-color: $color_light;
     margin: 0;
     li {
         display: inline;
@@ -95,13 +103,14 @@ nav {
             text-decoration: none;
             transition: color 200ms ease-out;
             &:hover {
-                color: $color_curious_blue_approx;
+                color: $color_primary;
             }
         }
         +li:before {
-            padding: 8px;
-            color: $color_black;
-            content: "/\00a0";
+            padding: 0 8px 0 6px;
+            content: "\2bc8";
+            font-size: 80%;
+            color: $color_secondary;
         }
     }
 
@@ -110,7 +119,7 @@ nav {
 #map {
     min-height: 320px;
     min-height: 33.33vh;
-    background-color: $color_tundora_approx;
+    background-color: $color_secondary;
 }
 
 .filter-options {
@@ -118,19 +127,28 @@ nav {
     justify-content: center;
     align-items: stretch;
     text-align: center;
-    background-color: $color_curious_blue_approx;
-    #filter-options-label {
-        color: $color_white;
+    background-color: $color_primary;
+    #filter-options-heading {
+        color: $color_light;
         font-size: 1.2rem;
         font-weight: normal;
         line-height: 1;
         margin: 1rem 1rem 1rem;
     }
+    .filter-options-label {
+        @extend %visuallyHidden;
+    }
     select {
-        background-color: $color_white;
+        background-color: $color_light;
         border: none;
         font-size: 1rem;
         margin: 0 1rem 1rem;
         padding: 0.5rem 1rem;
+    }
+}
+
+.restaurant-detail-view {
+    #map-container {
+        order: 1;
     }
 }

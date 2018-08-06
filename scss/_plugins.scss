@@ -1,0 +1,22 @@
+#map {
+
+    border: 2px solid $color_light;
+
+    &:focus {
+        border: 2px solid $color_accent;
+    }
+
+    .leaflet-control-attribution {
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    a {
+        color: $color_primary;
+        outline-offset: 0rem;
+    }
+
+    .leaflet-marker-pane img:focus {
+        @extend %focusBasic;
+    }
+
+}

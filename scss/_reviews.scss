@@ -18,8 +18,8 @@
     list-style-type: none;
     li {
         @extend %boxShadow;
-        background-color: $color_white;
-        display: block;       
+        background-color: $color_light;
+        display: block;
         margin: 1rem;
         padding: 0;
         max-width: 24rem;
@@ -33,7 +33,7 @@
     border-bottom: 1px solid $color_accent;
     padding: 1rem 1rem;
     line-height: 1;
-    background-color: $color_concrete_approx;
+    background-color: $color_unobtrusive;
 }
 
 .review-name {

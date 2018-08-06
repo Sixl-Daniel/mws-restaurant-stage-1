@@ -1,5 +1,9 @@
 /* List of restaurants on home page */
 
+#restaurants-list-heading {
+    @extend %visuallyHidden;
+}
+
 #restaurants-list {
     @extend %flexHorizontal;
     justify-content: center;
@@ -12,14 +16,14 @@
         @extend %flexVertical;
         @extend %boxShadow;
         justify-content: space-between;
-        background-color: $color_white;
+        background-color: $color_light;
         margin: 1rem;
         padding: 0;
         text-align: left;
         max-width: 320px;
         a {
             background-color: $color_accent;
-            color: $color_white;
+            color: $color_light;
             display: block;
             margin: 1rem 0 0;
             padding: 1rem 2rem 1rem;
@@ -29,7 +33,7 @@
             text-transform: uppercase;
             transition: background-color 200ms ease-out;
             &:hover {
-                background-color: $color_curious_blue_approx;
+                background-color: $color_primary;
             }
         }
 
@@ -39,7 +43,7 @@
         overflow: hidden;
     }
     .restaurant-img {
-        background-color: $color_celeste_approx;
+        background-color: $color_dark;
         transform: scale(1) rotate(0);
         transition: all 900ms ease-in-out;
         
@@ -48,14 +52,13 @@
         transform: scale(1.2) rotate(1deg);
     }
     .restaurant-heading {
-        color: $color_accent;
+        color: $color_accent_dark;
         font-size: 1.2rem;
         text-transform: uppercase;
         margin: 0 0 1rem 0;
         padding: 0.5rem 1rem;
         border-bottom: 1px solid $color_accent;
     }
-    
     p {
         margin: 0 1rem;
     }
@@ -64,14 +67,14 @@
 /* Detail view of restaurant */
 
 #restaurant-container {
-    background-color: $color_white;
+    background-color: $color_secondary;
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
 }
 
     #restaurant-img {
-        background-color: $color_concrete_approx;
+        background-color: $color_unobtrusive;
     }
 
     #restaurant-name {
@@ -80,29 +83,28 @@
         font-size: 1.5em;
         margin: 0;
         text-transform: uppercase;
-        background-color: $color_white;
+        background-color: $color_light;
         font-weight: 700;
+        border-top: 1px solid $color_accent;
     }
 
     #restaurant-address {
         padding: 1rem;
         margin: 0;
         line-height: 1;
-        // border-bottom: 1px solid $color_accent;
         background-color: $color_accent;
-        color: $color_white;
+        color: $color_light;
         font-weight: 700;
     }
 
     #restaurant-cuisine {
-        background-color: $color_mine_shaft_approx;
-        color: $color_celeste_approx;
+        background-color: $color_secondary;
+        color: $color_light;
         margin: 0;
         padding: 1rem;
         text-align: center;
         font-size: 1.2em;
         span {
-            color: $color_accent;
             text-transform: uppercase;
             font-weight: 700;
             padding: 0 0.5rem;
@@ -114,11 +116,15 @@
     width: 100%;
     border-collapse: collapse;
     text-align: left;
-    background-color: $color_white;
+    background-color: $color_light;
     tr:nth-child(even) {
-        background-color: $color_concrete_approx;
+        background-color: $color_background;
     }
     td {
         padding: 0.5rem;
+        &:first-child {
+            font-weight: 700;
+            color: $color_secondary;
+        }
     }
 }

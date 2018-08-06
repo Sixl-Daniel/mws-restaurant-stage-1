@@ -1,23 +1,29 @@
 // colors
 
-$color_white: #fff;
-$color_black: black;
-$color_orange: #ff9800;
+$color1: rgba(11, 57, 84, 1);
+$color2: rgba(8, 126, 139, 1);
+$color3: rgb(191, 215, 234);
+$color4: rgba(255, 90, 95, 1);
+$color5: rgba(200, 29, 37, 1);
+$color6: rgba(243, 201, 105, 1);
+$color7: rgba(237, 237, 237,1);
 
-// colors approx
 
-$color_curious_blue_approx: #3397db;
-$color_wafer_approx: #DBCBBC;
 
+$color_alabaster: #fafafa;
 $color_concrete_approx: #f3f3f3;
-$color_celeste_approx: #ccc;
-$color_silver_chalice_approx: #aaa;
-$color_storm_dust_approx: #666;
-$color_tundora_approx: #444;
-$color_mine_shaft_approx: #333;
+$color_tundora_approx: #444444;
+$color_cod_gray_approx: #111111;
 
 // functional
 
-$color_accent: $color_orange;
-$color_primary: $color_curious_blue_approx;
-$color_secondary: $color_tundora_approx;
+$color_accent: $color5;
+$color_accent_dark: $color1;
+$color_primary: $color1;
+$color_secondary: $color2;
+$color_tertiary: $color6; // not in use
+$color_unobtrusive: $color3;
+$color_background: $color7;
+
+$color_dark: $color_cod_gray_approx;
+$color_light: $color_alabaster;
