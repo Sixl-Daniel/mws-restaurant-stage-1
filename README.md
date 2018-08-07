@@ -1,32 +1,73 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+# Restaurant Reviews :stew:
+*A practice project for the Udacity Front End Web Developer Nanodegree Program*
 
-## Project Overview: Stage 1
+## Getting started
+:exclamation: You need a web server to run this game.  
+[**Please review the application on it's GitHub Page.**](https://sixl-daniel.github.io/mws-restaurant-stage-1/)
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+### Use your existing web hoster
+Just upload all files to a new directory at your website host with a FTP application. Point a domain to the games directory and you are good to go.
 
-### Specification
+### Use a local web server with Node
+You can setup a simple *HTTP Server* on your local machine by using *NodeJS*.
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+1. **Download and install NodeJS**  
+Download the latest stable release from [https://nodejs.org/](https://nodejs.org/) and install it with default setting.
 
-### What do I do from here?
+2. **Install http-server from npm**  
+Install the package *http-server* globally with the node package manager command line tool. Open a command prompt and enter:
+    ```
+    $ npm install http-server -g
+    ```
+3. **Clone this repository**  
+Change to a folder you want the app in. Then clone the files of this repo to a new directory and change into it:
+    ```
+    $ git clone https://github.com/Sixl-Daniel/mws-restaurant-stage-1.git MyNewAppDirectory
+    $ cd MyNewAppDirectory
+    ```
+3. **Start your web server**
+    ```
+    $ http-server -p 8000
+    ```
+5. **Point your browser to your local website**  
+Open your browser and go to http://localhost:8000 to start the app.  
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+### Use a local web server with Python
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+1. **Download and install Python**
+Navigate to [Python's download page](https://www.python.org/downloads/) to download and install the software.
 
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+2. **Clone this repository**  
+Change to a folder you want the app in. Then clone the files of this repo to a new directory and change into it:
+    ```
+    $ git clone https://github.com/Sixl-Daniel/mws-restaurant-stage-1.git MyNewAppDirectory
+    $ cd MyNewAppDirectory
+    ```
+3. **Start your web server**  
+If you installed Python 2.x, start the server with `python -m SimpleHTTPServer 8000`. For Python 3.x, use `python3 -m http.server 8000`.
 
-## Leaflet.js and Mapbox:
+5. **Point your browser to your local website**  
+Open your browser and go to http://localhost:8000 to start the app.  
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
+## Project Specs
+- **Responsive Design**
+    - Is the site UI compatible with a range of display sizes?
+    - Are images responsive?
+    - Are application elements visible and usable in all viewports?
+- **Accessibility**
+    - Are images accessible?
+    - Is focus used appropriately to allow easy navigation of the site?
+    - Are site elements defined semantically?
+- **Offline Availability**
+    - Are pages that have been visited available offline?
 
-### Note about ES6
+## Libraries
+This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/), [Google Fonts](https://fonts.google.com/), [normalize-scss](https://github.com/JohnAlbin/normalize-scss) and [Workbox](https://developers.google.com/web/tools/workbox/).
 
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
+## Code snippets & Tutorials
 
+- **NodeJS - Setup a Simple HTTP Server / Local Web Server**  
+[http://jasonwatmore.com/post/2016/06/22/nodejs-setup-simple-http-server-local-web-server]()
 
-
+- **Workbox - Guides - Get started**  
+[https://developers.google.com/web/tools/workbox/guides/get-started]()
