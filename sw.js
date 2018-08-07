@@ -2,6 +2,8 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 
 if (workbox) {
 
+    workbox.core.setLogLevel(workbox.core.LOG_LEVELS.silent);
+
     workbox.routing.registerRoute(
         new RegExp('/.*'),
         workbox.strategies.staleWhileRevalidate({
