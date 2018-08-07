@@ -8,8 +8,13 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
-    const port = 8000 // Change this to your server port
-    return `http://localhost:${port}/data/restaurants.json`;
+    const liveURLGitHub = 'https://sixl-daniel.github.io/mws-restaurant-stage-1/data/restaurants.json';
+    const localPort = 8000;
+    if (location.host === `localhost:${localPort}`) {
+      return `http://localhost:${localPort}/data/restaurants.json`;
+    } else {
+      return liveURLGitHub;
+    }
   }
 
   /**
