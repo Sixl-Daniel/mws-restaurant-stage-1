@@ -71,3 +71,7 @@ This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://w
 
 - **Workbox - Guides - Get started**  
 [https://developers.google.com/web/tools/workbox/guides/get-started]()
+
+- **Responsive typography with REMs:  
+How to build a scalable typographic foundation in three steps**  
+[https://blog.bugsnag.com/responsive-typography-with-rems]()
